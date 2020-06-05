@@ -7,7 +7,7 @@ export async function up(knex:Knex) {
         table.string('image').notNullable(),
         table.string('name').notNullable(),
         table.string('email').notNullable(),
-        table.string('whasapp').notNullable(),
+        table.string('whatsapp').notNullable(),
         table.decimal('latitude').notNullable(),
         table.decimal('longitude').notNullable(),
         table.string('city').notNullable(),
@@ -17,5 +17,5 @@ export async function up(knex:Knex) {
 }
 
 export async function down(knex: Knex) {
-    return knex.schema.dropTable('point')
+    return knex.schema.dropTable('points')
 }
